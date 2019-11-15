@@ -1,3 +1,10 @@
+to connect github
+goto github.atom.io/login
+copy the token
+open github tab in atom
+login by pasting the token
+
+
 to run
 ctrl + shift+b
 

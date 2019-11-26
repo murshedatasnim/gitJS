@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="module" id="DEFAULT_MODULE">
+           import Atom from './atom.js';
+           console.log("definition of getAtom")
+           export default function getAtom(){
+            return new Atom('atom');
+           }
+           console.log("exported getAtom")
+</script>
+<script type="module">
+    import getAtom from '.'; //this line does not work
+    console.log("usage of getAtom")
+    var atom = getAtom();
+</script>
+</head>
+<body>
+
+</body>
+</html>

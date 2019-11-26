@@ -259,3 +259,54 @@ console.log(createPerson("zodiac Hasbro", 56, "male"));
 
 
 //concise declarative functions
+
+const bicycle = {
+  gear: 2,
+  setGear(newGear){
+    this.gear = newGear;
+  }
+};
+
+bicycle.setGear(4);
+
+console.log(bicycle.gear);
+
+//use class syntax to define a constructor function
+
+
+class SpaceShuttle {
+  constructor(targetPlanet){
+    this.targetPlanet = targetPlanet;
+  }
+}
+
+var zeus = new SpaceShuttle('jupiter');
+console.log(zeus.targetPlanet);
+
+//getter setter
+
+function makeClass() {
+  class Thermo {
+    constructor(tempt) {
+      this._temp=tempt; //underscore for private
+    }
+    get tempt(){
+      return this._temp;
+    }
+    set tempt(ut){
+      this._temp=ut;
+    }
+  }
+  return Thermo;
+}
+
+const thermos = makeClass();
+const tem = new thermos(23);
+let temp = tem.tempt;
+tem.tempt = 34;
+temp = tem.temp;
+console.log(temp);
+
+
+
+//alert and prompt

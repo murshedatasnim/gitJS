@@ -16,6 +16,7 @@
 //
 // }
 // console.log(wordBlanks("dog", "big", "ran", "quickly"));
+
 var a = [["as",1],["kaj",4]];
 a.shift();
 //a.pop(["asd",3]);

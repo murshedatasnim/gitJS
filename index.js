@@ -1,4 +1,4 @@
-// console.log("hello");
+ // console.log("hello");
 // var a = 9;
 // var c = "okay"; // var can be accessed from anywhere
 // let s = "kajshd";//can be used only within a scope. local var

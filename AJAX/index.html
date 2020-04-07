@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function newAjax(){
+            var ajax;
+            if(window.XMLHttpRequest){
+                ajax=new XMLHttpRequest;
+            }
+            else{
+                ajax=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            return ajax;
+        }
+
+        function Loadme(){
+            var ajaxHandler = newAjax();
+            ajaxHandler.onreadystatechange=function(){
+                if(ajaxHandler.readyState==4 && ajaxHandler.status==200){
+                    alert(ajaxHandler.responseText);
+                    document.getElementById("loadMe").innerHTML = ajaxHandler.responseText;
+                }
+            }
+            ajaxHandler.open("GET","mypage.html",true);
+            ajaxHandler.send();
+        }
+    </script>
+</head>
+<body>
+    <div id='loadMe'>&nbsp;</div>
+    <button onclick='Loadme();'>Ajax my page</button>
+</body>
+</html>

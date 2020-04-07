@@ -3,23 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <script type="module" id="DEFAULT_MODULE">
-           import Atom from './atom.js';
-           console.log("definition of getAtom")
-           export default function getAtom(){
-            return new Atom('atom');
-           }
-           console.log("exported getAtom")
-</script>
-<script type="module">
-    import getAtom from '.'; //this line does not work
-    console.log("usage of getAtom")
-    var atom = getAtom();
-</script>
 </head>
 <body>
+  <script>
+    //window.location = "http://google.com/";
+    //window.open("http://google.com/","","width=800,height=600,scrollbar=yes","true");
+    var name=prompt("Enter your name ");
+    try{
+      var len=name.length;
+      if(len<5){
+        throw("len is less than 5");
+      }
+      else if(len>5){
+        throw("len is greater than 5");
+      }
+      else{
+        throw("len is equal to 5");
+      }
+    }catch(e){
+      alert(e);
+    }
+    var d=new Date;
+    var day=new Array("sunday","monday","tuesday","wednesday","thursday","friday","saturday");
+    var v=d.getDay();
+    document.write(day[v]);
 
+  </script>
+  <a href="javascript: void(0);">link</a>
 </body>
 </html>

@@ -310,3 +310,13 @@ console.log(temp);
 
 
 //alert and prompt
+
+//var v = prompt('wowow');
+//console.log(v);
+
+var c = confirm("Ok or cancel?");
+if (c) {
+  alert("You pressed \"ok\"");
+} else {
+  alert('You clicked "Cancel"')
+}
